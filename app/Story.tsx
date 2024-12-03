@@ -1,9 +1,15 @@
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import React from 'react'
+import { router } from 'expo-router'
 
 
 
 const Story = () => {
+
+
+    const SeeImage=()=>{
+          router.navigate("/ImageList")
+    }
     return (
         <>
             <View style={styles.Theme}>
@@ -12,9 +18,9 @@ const Story = () => {
 
 
                     {
-                        [1, 2, 3, 4, 5, 6, 6].map((item) => {
+                        [1, 2, 3, 4, 5, 6, 6].map((item,index) => {
                             return (
-                                <View style={{ height: 100, width: 100, backgroundColor: "blue", marginLeft: 2, borderRadius: 50, marginTop: 5 }}></View>
+                                <View  key={index} style={{ height: 100, width: 100, backgroundColor: "blue", marginLeft: 2, borderRadius: 50, marginTop: 5 }}></View>
                             )
                         })
                     }
@@ -30,9 +36,12 @@ const Story = () => {
 
 
                     
-                <View style={{flex:1, justifyContent:'center', alignItems:"center" backgroundColor:'green'}} >
+                <View style={{ justifyContent:'center', alignItems:"center" }} >
 
-                    <View style={styles.post} ></View>
+                    <View style={styles.post} >
+                       
+                    </View>
+                    <Text  onPress={SeeImage} style={{color:"blue", zIndex:1}}>See All images</Text>
 
                 </View>
             </View>
@@ -75,7 +84,7 @@ const styles = StyleSheet.create({
         
         flex:1,
         height:200,
-            width: 200,
+            width: 300,
             padding: 150,
             marginBottom: 10,
             backgroundColor: "white",

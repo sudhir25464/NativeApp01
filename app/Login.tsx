@@ -35,7 +35,7 @@ const router = useRouter()
 
 
   const alertfn = ()=>{
- Alert.alert("wait uguygyuy");
+ Alert.alert("Wait Few Second Dear ");
   }
 
 

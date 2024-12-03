@@ -9,6 +9,8 @@ const  RootLayout=()=> {
       <Stack.Screen name="Login"/>
       <Stack.Screen name="SignUp"/>
       <Stack.Screen name="Story"/>
+      <Stack.Screen  name="ImageList"/>
+      
     </Stack>
   );
 }
